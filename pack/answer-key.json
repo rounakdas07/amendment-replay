@@ -1,0 +1,221 @@
+{
+  "pack_version": "1.0.0",
+  "cases": [
+    {
+      "id": "AR-153",
+      "pair": "co-primary-endpoint",
+      "expected": "pass",
+      "rationale": "The synopsis gives response rate its revised rank alongside the existing co-primary endpoints.",
+      "correction": null,
+      "source": "https://cdn.clinicaltrials.gov/large-docs/49/NCT02231749/Prot_001.pdf#page=3",
+      "locator": "Document history, p. 3"
+    },
+    {
+      "id": "AR-167",
+      "pair": "crossover-offer",
+      "expected": "pass",
+      "rationale": "The worksheet preserves eligibility and offers the extension as a choice.",
+      "correction": null,
+      "source": "https://cdn.clinicaltrials.gov/large-docs/49/NCT02231749/Prot_001.pdf#page=3",
+      "locator": "Document history, p. 3"
+    },
+    {
+      "id": "AR-238",
+      "pair": "analysis-trigger",
+      "expected": "flag",
+      "rationale": "Either trigger on its own could release the analysis before the amended conditions are met.",
+      "correction": "Require both conditions and retain the last enrolment as the start of the follow-up clock.",
+      "source": "https://www.ema.europa.eu/en/documents/variation-report/tagrisso-h-c-004124-ii-0053-epar-assessment-report-variation_en.pdf#page=57",
+      "locator": "Table 15, p. 57"
+    },
+    {
+      "id": "AR-284",
+      "pair": "two-year-stop",
+      "expected": "pass",
+      "rationale": "The site keeps the two-year stopping option and leaves the decision open.",
+      "correction": null,
+      "source": "https://cdn.clinicaltrials.gov/large-docs/49/NCT02231749/Prot_001.pdf#page=3",
+      "locator": "Document history, p. 3"
+    },
+    {
+      "id": "AR-291",
+      "pair": "death-as-event",
+      "expected": "pass",
+      "rationale": "Death before another intervention contributes an event under the revised definition.",
+      "correction": null,
+      "source": "https://www.ema.europa.eu/en/documents/assessment-report/voranigo-epar-public-assessment-report_en.pdf#page=73",
+      "locator": "Table 20, p. 73"
+    },
+    {
+      "id": "AR-312",
+      "pair": "kras-test",
+      "expected": "flag",
+      "rationale": "Sites could order a research procedure that this amendment removed.",
+      "correction": "Remove the optional study KRAS order from this manual.",
+      "source": "https://portal.dimdi.de/data/ctr/O-2145_01-2-0-CE336C-20220110151635.pdf#search=Amendments%20to%20Protocol",
+      "locator": "Amendments to Protocol, row P024-01"
+    },
+    {
+      "id": "AR-346",
+      "pair": "germany-tb",
+      "expected": "pass",
+      "rationale": "All entrants at German sites are covered, and the claim is confined to that amendment.",
+      "correction": null,
+      "source": "https://portal.dimdi.de/data/ctr/O-2145_01-2-0-CE336C-20220110151635.pdf#search=Amendments%20to%20Protocol",
+      "locator": "Amendments to Protocol, row P024-02"
+    },
+    {
+      "id": "AR-368",
+      "pair": "progression-crossover",
+      "expected": "pass",
+      "rationale": "The form removes the progression hurdle and leaves other conditions in place.",
+      "correction": null,
+      "source": "https://portal.dimdi.de/data/ctr/O-2145_01-2-0-CE336C-20220110151635.pdf#search=Amendments%20to%20Protocol",
+      "locator": "Amendments to Protocol, row P024-06"
+    },
+    {
+      "id": "AR-426",
+      "pair": "repeat-assessment",
+      "expected": "flag",
+      "rationale": "The schedule would add repeat assessments for participants already at stage 5 at baseline.",
+      "correction": "Limit interval reassessment to those below stage 5 at the initial assessment.",
+      "source": "https://www.ema.europa.eu/en/documents/assessment-report/voranigo-epar-public-assessment-report_en.pdf#page=73",
+      "locator": "Table 20, p. 73"
+    },
+    {
+      "id": "AR-458",
+      "pair": "lamotrigine",
+      "expected": "flag",
+      "rationale": "The checklist could turn away a candidate who should still be assessed.",
+      "correction": "Remove the automatic screen failure for lamotrigine alone.",
+      "source": "https://www.ema.europa.eu/en/documents/assessment-report/voranigo-epar-public-assessment-report_en.pdf#page=72",
+      "locator": "Table 20, p. 72"
+    },
+    {
+      "id": "AR-473",
+      "pair": "age-boundary",
+      "expected": "pass",
+      "rationale": "Using age in completed years, 15 or younger is the same boundary as under 16.",
+      "correction": null,
+      "source": "https://www.ema.europa.eu/en/documents/assessment-report/voranigo-epar-public-assessment-report_en.pdf#page=72",
+      "locator": "Table 20, p. 72"
+    },
+    {
+      "id": "AR-524",
+      "pair": "crossover-offer",
+      "expected": "flag",
+      "rationale": "The worksheet bypasses eligibility and treats an available crossover as an automatic transfer.",
+      "correction": "Check crossover eligibility and describe entry as an option.",
+      "source": "https://cdn.clinicaltrials.gov/large-docs/49/NCT02231749/Prot_001.pdf#page=3",
+      "locator": "Document history, p. 3"
+    },
+    {
+      "id": "AR-584",
+      "pair": "survival-window",
+      "expected": "flag",
+      "rationale": "A site would discard survival information that the amendment allows it to collect.",
+      "correction": "Allow out-of-window supplementary survival data while preserving the scheduled visits.",
+      "source": "https://cdn.clinicaltrials.gov/large-docs/49/NCT02231749/Prot_001.pdf#page=3",
+      "locator": "Document history, p. 3"
+    },
+    {
+      "id": "AR-617",
+      "pair": "two-year-stop",
+      "expected": "flag",
+      "rationale": "A site following this draft would take a choice away from patients who could continue treatment.",
+      "correction": "Make stopping optional for Arm A patients who reach two years without progression or unacceptable toxicity.",
+      "source": "https://cdn.clinicaltrials.gov/large-docs/49/NCT02231749/Prot_001.pdf#page=3",
+      "locator": "Document history, p. 3"
+    },
+    {
+      "id": "AR-632",
+      "pair": "survival-window",
+      "expected": "pass",
+      "rationale": "Additional survival information can be recorded outside the usual schedule.",
+      "correction": null,
+      "source": "https://cdn.clinicaltrials.gov/large-docs/49/NCT02231749/Prot_001.pdf#page=3",
+      "locator": "Document history, p. 3"
+    },
+    {
+      "id": "AR-682",
+      "pair": "age-boundary",
+      "expected": "flag",
+      "rationale": "A 16-year-old would be assigned a scale intended here for the younger group.",
+      "correction": "Set the Lansky threshold to under 16, in completed years.",
+      "source": "https://www.ema.europa.eu/en/documents/assessment-report/voranigo-epar-public-assessment-report_en.pdf#page=72",
+      "locator": "Table 20, p. 72"
+    },
+    {
+      "id": "AR-769",
+      "pair": "co-primary-endpoint",
+      "expected": "flag",
+      "rationale": "The synopsis would give a primary measure the wrong standing.",
+      "correction": "Identify objective response rate as an additional co-primary endpoint.",
+      "source": "https://cdn.clinicaltrials.gov/large-docs/49/NCT02231749/Prot_001.pdf#page=3",
+      "locator": "Document history, p. 3"
+    },
+    {
+      "id": "AR-791",
+      "pair": "germany-tb",
+      "expected": "flag",
+      "rationale": "The checklist exports a German requirement to sites outside that amendment’s scope.",
+      "correction": "Limit this amendment-specific instruction to German sites. Check other sites against their own requirements.",
+      "source": "https://portal.dimdi.de/data/ctr/O-2145_01-2-0-CE336C-20220110151635.pdf#search=Amendments%20to%20Protocol",
+      "locator": "Amendments to Protocol, row P024-02"
+    },
+    {
+      "id": "AR-807",
+      "pair": "repeat-assessment",
+      "expected": "pass",
+      "rationale": "The schedule distinguishes the initial assessment from the subgroup needing repeats.",
+      "correction": null,
+      "source": "https://www.ema.europa.eu/en/documents/assessment-report/voranigo-epar-public-assessment-report_en.pdf#page=73",
+      "locator": "Table 20, p. 73"
+    },
+    {
+      "id": "AR-835",
+      "pair": "death-as-event",
+      "expected": "flag",
+      "rationale": "The analysis would treat a defined endpoint event as a censored observation.",
+      "correction": "Count death as an event in the time-to-next-intervention analysis.",
+      "source": "https://www.ema.europa.eu/en/documents/assessment-report/voranigo-epar-public-assessment-report_en.pdf#page=73",
+      "locator": "Table 20, p. 73"
+    },
+    {
+      "id": "AR-859",
+      "pair": "analysis-trigger",
+      "expected": "pass",
+      "rationale": "The checklist requires both the event target and the follow-up minimum measured from last enrolment.",
+      "correction": null,
+      "source": "https://www.ema.europa.eu/en/documents/variation-report/tagrisso-h-c-004124-ii-0053-epar-assessment-report-variation_en.pdf#page=57",
+      "locator": "Table 15, p. 57"
+    },
+    {
+      "id": "AR-903",
+      "pair": "lamotrigine",
+      "expected": "pass",
+      "rationale": "The checklist removes this single exclusion while keeping the rest of screening intact.",
+      "correction": null,
+      "source": "https://www.ema.europa.eu/en/documents/assessment-report/voranigo-epar-public-assessment-report_en.pdf#page=72",
+      "locator": "Table 20, p. 72"
+    },
+    {
+      "id": "AR-948",
+      "pair": "kras-test",
+      "expected": "pass",
+      "rationale": "The lab menu removes the study-specific order without making a claim about routine care.",
+      "correction": null,
+      "source": "https://portal.dimdi.de/data/ctr/O-2145_01-2-0-CE336C-20220110151635.pdf#search=Amendments%20to%20Protocol",
+      "locator": "Amendments to Protocol, row P024-01"
+    },
+    {
+      "id": "AR-975",
+      "pair": "progression-crossover",
+      "expected": "flag",
+      "rationale": "The form would block requests on a condition the amendment removed.",
+      "correction": "Remove the mandatory progression-documentation field as a gate to crossover.",
+      "source": "https://portal.dimdi.de/data/ctr/O-2145_01-2-0-CE336C-20220110151635.pdf#search=Amendments%20to%20Protocol",
+      "locator": "Amendments to Protocol, row P024-06"
+    }
+  ]
+}

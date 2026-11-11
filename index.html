@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#293646">
+  <meta name="description" content="Would your protocol reviewer catch a change from may stop to must stop? Replay 24 source-linked oncology test cases and score your reviewer locally.">
+  <meta property="og:title" content="Amendment Replay · Can your reviewer spot the change?">
+  <meta property="og:description" content="24 test cases from 4 oncology trials. See the amendment, the downstream draft and the consequence.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://rounakdas07.github.io/amendment-replay/preview.png">
+  <title>Amendment Replay · Oncology trial review</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#workspace">Skip to workspace</a>
+<header class="topbar">
+  <div class="headwrap">
+    <a class="brand" href="#case/two-year-stop" aria-label="Amendment Replay home"><span class="brandmark" aria-hidden="true"><i></i><i></i><i></i></span>Amendment <strong>Replay</strong></a>
+    <nav aria-label="Workspace">
+      <a id="nav-replay" href="#case/two-year-stop" aria-current="page">Explore cases</a>
+      <a id="nav-score" href="#score">Score a reviewer</a>
+    </nav>
+    <a class="repo-link" href="https://github.com/rounakdas07/amendment-replay">GitHub <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+<main id="workspace" class="wrap" tabindex="-1">
+<section id="replay-view" aria-label="Worked example">
+  <div class="case-tools">
+    <div class="case-location"><span class="section-pin" aria-hidden="true"></span> Case explorer <span class="separator">/</span> <span id="position">01 of 12</span></div>
+    <button id="browse" class="text-button"><span aria-hidden="true">☰</span> Browse cases</button>
+  </div>
+  <section class="hero" aria-labelledby="case-title">
+    <div class="hero-text">
+      <p class="kicker" id="hero-kicker">CheckMate 214 <span>·</span> Kidney cancer</p>
+      <h1 id="case-title">Stopping treatment at two years</h1>
+      <p class="hero-sub" id="hero-sub">Compare a published protocol change with a draft site handbook.</p>
+    </div>
+    <aside class="file-stack" aria-label="Trial record">
+      <div class="ghost-sheet back"></div><div class="ghost-sheet mid"></div>
+      <div class="file-sheet"><div class="file-head"><span class="tiny-file" aria-hidden="true"></span> Trial record</div>
+        <a id="registry" href="https://clinicaltrials.gov/study/NCT02231749" target="_blank" rel="noopener">NCT02231749 ↗</a>
+        <div class="file-rule"></div><div class="file-detail"><span id="amendment">Amendment 14</span><span id="record-date">13 Nov 2017</span></div>
+      </div>
+    </aside>
+  </section>
+  <div class="compare-grid" aria-label="Compare the rule and the draft">
+    <article class="doc rule-doc">
+      <div class="doc-head"><span class="doc-symbol original" aria-hidden="true">§</span><div><p class="doc-label">Published change</p><p class="doc-sub">Source paraphrase</p></div></div>
+      <p class="excerpt" id="rule">Arm A patients <mark>may stop</mark> treatment after two years even if their cancer has not progressed and toxicity is acceptable.</p>
+      <a class="source-link" id="source" href="https://cdn.clinicaltrials.gov/large-docs/49/NCT02231749/Prot_001.pdf#page=3" target="_blank" rel="noopener">Read the original · p. 3 ↗</a>
+    </article>
+    <article class="doc draft-doc">
+      <div class="doc-head"><span class="doc-symbol copy" aria-hidden="true">≡</span><div><p id="draft-heading" class="doc-label">Site handbook</p><p class="doc-sub">Illustrative draft</p></div></div>
+      <p class="excerpt" id="draft">Arm A patients who are doing well <mark>must stop</mark> treatment after two years.</p>
+      <div class="variant" role="group" aria-label="Choose a draft"><button type="button" id="variant-conflict" aria-pressed="true">Conflicting draft</button><button type="button" id="variant-clean" aria-pressed="false">Faithful draft</button></div>
+    </article>
+  </div>
+  <div class="verdict" id="verdict" role="status" aria-live="polite" aria-atomic="true">
+    <span class="verdict-icon" id="verdict-icon" aria-hidden="true">!</span>
+    <div><h2 id="verdict-title">Flag this draft</h2><p id="impact">A site following this draft would take a choice away from patients who could continue treatment.</p></div>
+  </div>
+  <div class="case-bottom">
+    <p>12 published changes <span>·</span> 24 example drafts <span>·</span> 4 oncology trials</p>
+    <div class="case-arrows"><button id="previous" class="btn outline" aria-label="Previous case">←</button><button id="next" class="btn dark">Next case <span aria-hidden="true">→</span></button></div>
+  </div>
+  <div class="handoff"><div><h2>Test your own reviewer</h2><p>See which changes it catches and which faithful drafts it flags by mistake.</p></div><a href="#score" class="btn outline">Open scoring <span aria-hidden="true">→</span></a></div>
+</section>
+
+<section id="score-view" aria-label="Reviewer scoring" hidden>
+  <div class="case-tools"><div class="case-location"><span class="section-pin" aria-hidden="true"></span> Reviewer scoring</div><span class="version">Pack v1.0.0</span></div>
+  <section class="hero score-hero"><div class="hero-text"><p class="kicker">Oncology amendment test pack</p><h1>Score a protocol reviewer</h1><p class="hero-sub">Run the same 24 drafts before and after a reviewer update to see what improved or slipped.</p></div></section>
+  <div class="score-steps">
+    <article><h2>1. Get the cases</h2><p>The kit includes 24 unlabelled drafts, a reviewer prompt and a blank predictions file. Run each draft on its own.</p><a class="btn outline" href="pack/reviewer-kit.zip" download>Download test kit <span aria-hidden="true">↓</span></a></article>
+    <article><h2>2. Score your decisions</h2><p>Upload the filled predictions JSON. Decisions are scored in this browser and stay on your device.</p><label class="btn dark file-button">Choose predictions file <span aria-hidden="true">↑</span><input id="upload" type="file" accept=".json,application/json" aria-label="Choose predictions file"></label></article>
+  </div>
+  <div class="demo-row"><div><h3>See an example result</h3><p>A simple checker flags drafts when their digits change. See which errors slip through.</p></div><button id="baseline" class="btn outline">Run number-only check <span aria-hidden="true">→</span></button></div>
+  <p id="score-error" role="alert" hidden></p>
+  <section id="results" hidden tabindex="-1" aria-labelledby="result-title">
+    <div class="result-head"><div><p class="eyebrow">Reviewer results</p><h2 id="result-title"></h2></div><button id="download-result" class="text-button">Export result ↓</button></div>
+    <div id="metrics" class="metrics"></div><p id="coverage" class="coverage"></p>
+    <div class="results-controls"><label class="filter">Show <select id="result-filter"><option value="all">All decisions</option><option value="missed">Missed conflicts</option><option value="false-alarm">False alarms</option><option value="correct">Correct</option><option value="unanswered">Unanswered or abstained</option></select></label>
+      <label class="text-button file-button">Compare another run ↑<input id="compare-file" type="file" accept=".json,application/json" aria-label="Compare another run"></label>
+    </div>
+    <p id="comparison" class="comparison" hidden></p>
+    <div class="table-scroll"><table><caption class="sr">Case decisions compared with the answer key</caption><thead><tr><th scope="col">Draft</th><th scope="col">Expected</th><th scope="col">Decision</th><th scope="col">Result</th></tr></thead><tbody id="result-rows"></tbody></table></div>
+    <p id="empty-results" hidden>No decisions match this filter.</p>
+  </section>
+  <details class="method"><summary>Method, answer key and limits</summary><p>Each of the 12 published changes has one conflicting draft and one faithful paraphrase. The drafts and answer key were written for this pack. A pair is correct only when both decisions are right. Missing decisions and abstentions earn no credit. A false alarm is a flag on a faithful draft.</p><p>This public practice set tests agreement with 12 selected rules. Its scores do not establish clinical performance. No commercial reviewer has been evaluated here.</p><a href="pack/answer-key.json" download>Download answer key ↓</a> <span>·</span> <a href="pack/reviewer-instructions.txt" download>Download instructions ↓</a></details>
+</section>
+<noscript><p>The opening case and source are available above. Enable JavaScript to browse other cases or score a reviewer. <a href="pack/reviewer-kit.zip">Download the test kit.</a></p></noscript>
+</main>
+<footer class="footer"><div class="wrap footwrap"><p>Built by <a href="https://github.com/rounakdas07">Rounak Das</a></p><p>Independent research prototype <span>·</span> Historical trial examples</p></div></footer>
+<dialog id="library" aria-labelledby="library-title"><div class="dialog-head"><div><p class="eyebrow">Case explorer</p><h2 id="library-title">Browse 12 changes</h2></div><button id="close-library" aria-label="Close case browser" class="close">×</button></div><div id="case-list"></div></dialog>
+<script type="module" src="app.mjs"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+Amendment Replay | pack v1.0.0
+
+Read the reference rule and the illustrative draft independently for each ID. Return "flag" if the draft conflicts with this rule, "pass" if it preserves it, or "abstain" if you cannot decide. Judge only the stated rule.
+
+Supply each line of cases.jsonl to your reviewer in a fresh context. Preserve the ID.
+Keep answer-key.json, the website verdicts and sibling examples out of the reviewer context.
+In predictions-template.json replace null with each resulting decision, leaving the IDs and pack_version as supplied.
+Retain the reviewer version, prompt and date privately if you plan to compare runs.
+Upload the predictions to the scoring page or use: node tools/score.mjs predictions.json
+Prior knowledge of this public set can inflate scores. Use separate unseen cases for performance estimates.
