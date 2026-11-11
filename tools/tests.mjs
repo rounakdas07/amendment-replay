@@ -77,3 +77,30 @@ test('version comparison reports gained and lost decisions separately', () => {
   assert.equal(compare(a,b).gained.length,12); assert.equal(compare(a,b).lost.length,12);
   assert.deepEqual(compare(a,a),{ gained:[], lost:[] });
 });
+
+test('every display example has a question, both readings and patient or study consequences', async () => {
+  const { readings } = await import('../data/reading.mjs');
+  assert.deepEqual(Object.keys(readings).sort(), changes.map(change => change.slug).sort());
+  for (const row of Object.values(readings)) {
+    for (const field of ['question','rule','conflict','clean','impact','cleanImpact']) assert.ok(row[field]?.length, field);
+  }
+});
+
+test('the copyable pair uses exactly the blind pack text and withholds its answers', async () => {
+  const { pairOrder, reviewerPrompt } = await import('../quick-test.mjs');
+  const reference = new Map(fixtures().map(row => [row.id, row]));
+  for (const change of changes) {
+    assert.deepEqual(pairOrder(change, false), change.ids);
+    assert.deepEqual(pairOrder(change, true), [change.ids[1], change.ids[0]]);
+    for (const id of change.ids) {
+      const row = reference.get(id);
+      const prompt = reviewerPrompt(id);
+      assert.ok(prompt.includes(row.reference_rule));
+      assert.ok(prompt.includes(row.draft));
+      assert.equal(prompt.split(row.document_type + ' draft: ').at(-1), row.draft);
+      assert.doesNotMatch(prompt, /\[\[|expected:|answer key:|correct answer:/i);
+      assert.ok(!prompt.includes(change.impact) && !prompt.includes(change.cleanWhy));
+    }
+  }
+  assert.throws(() => reviewerPrompt('AR-unknown'));
+});

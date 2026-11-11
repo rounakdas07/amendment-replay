@@ -4,6 +4,12 @@ Would a protocol reviewer notice that a site handbook changed **may stop treatme
 
 A public test pack for clinical trial teams evaluating a protocol reviewer. Each real rule change has two original downstream excerpts, one with a consequential discrepancy and one that faithfully restates it. Run both to catch misses and false alarms after a prompt, model or workflow update.
 
+## Try one example with your AI
+
+Open the [live demo](https://rounakdas07.github.io/amendment-replay/). The opening example puts the two instructions next to each other and shows what they would change for a patient. **Show the fix** reveals a faithful version. **Full wording and source** opens the complete excerpts and original amendment.
+
+Choose **Try with your AI** to copy two answer-free prompts, one at a time. Run each in a fresh conversation with your reviewer and select its answer. The demo scores both decisions and explains a miss or false alarm. No upload, account or API key is required for the two-draft test. The wording shown on the home screen is a plain-language summary. The copied prompts use the full, versioned test excerpts.
+
 ## Try the pack
 
 1. [Download the blind reviewer kit](https://rounakdas07.github.io/amendment-replay/pack/reviewer-kit.zip). It contains 24 cases as JSON Lines, a short reviewer instruction and a predictions template. Each case includes the rule, an illustrative draft, a source link and a locator.
