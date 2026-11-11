@@ -4,8 +4,8 @@ export const readings = {
   'two-year-stop': {
     question: 'After two years, does treatment have to stop?',
     rule: 'May stop', conflict: 'Must stop', clean: 'Can choose to stop',
-    impact: 'This handbook would make a site stop treatment even when a patient in Arm A could continue.',
-    cleanImpact: 'A patient in Arm A can still choose whether to stop after two years.',
+    impact: 'The handbook tells the trial team to stop treatment even when the patient could continue.',
+    cleanImpact: 'The patient can still choose whether to stop after two years.',
   },
   lamotrigine: {
     question: 'Does taking lamotrigine rule someone out?',

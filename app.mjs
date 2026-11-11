@@ -1,5 +1,5 @@
 import { changes, plain, sourceURL, trials } from './data/corpus.mjs';
-import { readings } from './data/reading.mjs';
+import { readings } from './data/reading.mjs?v=2.1';
 import { score, compare, numericBaseline, version } from './scoring.mjs';
 import { pairOrder, reviewerPrompt } from './quick-test.mjs';
 
